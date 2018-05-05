@@ -1,16 +1,3 @@
-{
-  "name": "elas_it4853",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "ejs": "^2.5.9",
-    "elasticsearch": "^14.2.2",
-    "express": "^4.16.3"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:619f5916b4735c98be059fba6186db477d1c80db46400018f3b12753b6b01beb
+size 310
