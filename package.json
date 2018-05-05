@@ -1,0 +1,16 @@
+{
+  "name": "elas_it4853",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.9",
+    "elasticsearch": "^14.2.2",
+    "express": "^4.16.3"
+  }
+}
