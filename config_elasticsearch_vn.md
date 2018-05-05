@@ -35,5 +35,5 @@ PUT my_search/_mapping/my_type
   }
 }
 
-
+curl -H "Content-Type: application/json" -XPOST "localhost:9200/my_search/my_type/_bulk?pretty" --data-binary "@elasimport0.json"
 
