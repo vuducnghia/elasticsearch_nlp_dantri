@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
     <meta charset="UTF-8">
@@ -10,11 +10,13 @@
     <script src="/js/jquery.js"></script>
     <script src="/js/elasticsearch.jquery.min.js"></script>
     <script src="/js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="/js/state.js"></script>
     <script type="text/javascript" src="/js/controller.js"></script>
-
+    
 </head>
 
-<body ng-app="myApp">
+<body ng-app="myApp" >
     <div ng-controller="myController">
         <form>
             <input type="text" placeholder="search" ng-model="data">
@@ -23,10 +25,14 @@
         </form>
         <ul>
             <li ng-repeat="item in ar">
-                <a href="/detail">{{item._source.title}}</a>
+                <a ng-href="/detail/{{item._id}}" ng-click="transfer(item)">{{item._source.title}}</a>
                 <p>score:{{item._score}}</p>
             </li>
         </ul>
+
+        <div ui-view></div>
+        <li><a ui-sref="route1">Route 1</a></li>
+        <li><a ui-sref="route2">Route 2</a></li>
     </div>
 
 </body>
