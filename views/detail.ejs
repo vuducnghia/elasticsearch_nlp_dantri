@@ -9,13 +9,18 @@
     <script src="/js/jquery.js"></script>
     <script src="/js/elasticsearch.jquery.min.js"></script>
     <script src="/js/angular.min.js"></script>
-    <script src="js/angular-ui-router.min.js"></script>
+    <!-- <script src="/js/angular-ui-router.min.js"></script> -->
+    <!-- <script type="text/javascript" src="/js/state.js"></script> -->
     <script type="text/javascript" src="/js/controller.js"></script>
 </head>
 
 <body ng-app="myApp">
     <div ng-controller="myController">
-        {{item}}
+        <form>
+            <input type="text" placeholder="search" ng-model="data">
+            <input type="text" placeholder="quantify" ng-model="quantify">
+            <button type="submit" ng-click="search(data, quantify)">Search</button>
+        </form>
         <ul>
             <li ng-repeat="item in ar">
                 <a ng-href="/detail/{{item._id}}" ng-click="transfer(item)">{{item._source.title}}</a>

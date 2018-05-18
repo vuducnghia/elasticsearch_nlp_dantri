@@ -1,42 +1,43 @@
-var app = angular.module('myApp', ['ui.router'])
+var app = angular.module('myApp', [])
     .controller('myController', myController);
-    myController.$inject = ['$scope']
+myController.$inject = ['$scope']
 
 function myController($scope) {
+    var client = new $.es.Client({
+        host:
+            {
+                protocol: 'http',
+                host: 'localhost'
+            }
+    });
+    $scope.data = ''
     $scope.quantify = 10
-    $scope.search = function (data, quantify) {
-        console.log(data)
-        $scope.item = null
-        var y = {
+    // $scope.ar = []
 
-        }
-        var client = new $.es.Client({
-            host:
-                {
-                    protocol: 'http',
-                    host: 'localhost'
-                }
-        });
-        client.search({
+    search1 = function () {
+        return client.search({
             index: 'my_search',
             body: {
                 query: {
                     match: {
-                        content: data
+                        content: $scope.data
                     }
                 },
-                size: quantify
+                size: $scope.quantify
             }
-        }).then(function (response) {
-            console.log(response.hits.hits)
-            $scope.ar = response.hits.hits
-
         })
     }
-    $scope.transfer = function (obj) {
-        console.log(obj)
-        $scope.item = obj
+
+
+    $scope.search = function () {
+        var x = []
+        search1().then(function (data) {
+            $scope.ar = data.hits.hits
+            console.log(1)
+        })
+        
     }
+
 };
 
 
