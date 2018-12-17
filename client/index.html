@@ -1,0 +1,64 @@
+<!doctype html>
+<html ng-app="EsConnector">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script src="angular.min.js"></script>
+  <script src="/elasticsearch.angular.js"></script>
+  <script src="es_connect.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container" ng-controller="QueryController">
+    <div class="row search_content">
+      <div class="col-md-12">
+        <h2 class="logo">Bk search</h2>
+        <div id="custom-search-input">
+          <input type="text" class="form-control input-lg" placeholder="Search" ng-model="data" ng-keyup="search()" />
+
+        </div>
+        
+      </div>
+    </div>
+    <div>
+
+    </div>
+
+    <div class="row content">
+      <table class="table">
+        <tr class="color" ng-repeat="item in hits">
+          <td >
+            <div class="text">
+              <a ng-href="/{{item['_id']}}-{{data}}">{{item['_source']['title']}}</a>
+            </div>
+            <div class="link_web">
+              <a href="#">{{item['_source']['url']}}</a>
+            </div>
+            <div class="main_content">
+                {{item['_source']['content']}}
+            </div>
+          </td>
+          <td>
+            <div class="score">
+              {{item['_score']}}
+            </div>
+          </td>
+
+        </tr>
+      </table>
+
+    
+    </div>
+
+   
+
+
+</body>
+
+</html>

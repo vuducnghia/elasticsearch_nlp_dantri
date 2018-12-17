@@ -1,0 +1,99 @@
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow:2px 5px grey;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+    
+}
+.logo{
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+}
+.text a{
+    font-size: 20px;
+    color:  black;    ;
+    text-decoration: none;
+    font-weight: bold;
+}
+.text{
+    padding: 15px;
+}
+.content{
+    margin-top:30px;
+}
+.score{
+    color:red;
+    padding: 15px;
+    font-size: 20px; 
+}
+.main_content{
+    padding: 15px;
+    overflow: hidden;
+    height: 37px;
+}
+
+.detail_title{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.detail_content{
+    margin-top: 20px;
+    font-size: 15px;
+    color: black;
+    margin-left: 25%;
+
+}
+
+.tr_content:hover{
+    background: grey;
+}
+
+.search_content{
+    background:  #f0f5f5    ;
+    height: 171px;
+}
+.option{
+    padding: 10px;
+
+}
+.color:hover{
+    background:  #ffffcc    ;
+    cursor: pointer;
+}
+.link_web{
+   
+    margin-left: 16px;
+}
+.link_web a{
+    color: green;
+}

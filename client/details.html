@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="EsConnector">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.js"></script>
+  <script src="elasticsearch.angular.js"></script>
+  <script src="es_connect.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container" ng-controller="QueryController2">    
+    {{hits[0]._source.content}}
+  </div>
+    <!-- {{hits}} -->
+</body>
+
+</html>
